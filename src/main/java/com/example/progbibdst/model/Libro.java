@@ -44,6 +44,9 @@ public class Libro {
 	@Column (nullable = false)
 	private String editore;
 	
+	@Column (nullable = false)
+	private String genere;
+	
 	
 	
 }
