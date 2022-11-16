@@ -41,6 +41,10 @@ public class Autore {
 	
   //	@OneToMany(mappedBy = "autore")
   //  private List<Libro> libri; 
+	
+	public Autore() {
+		
+	}
 
 	public Autore(Integer id, String nome, String cognome, Date annoNascita) {
 		
@@ -119,6 +123,11 @@ public class Autore {
 
 	public void setAnnoMorte(Date annoMorte) {
 		this.annoMorte = annoMorte;
+	}
+
+	@Override
+	public String toString() {
+		return "" + nome + " " + cognome;
 	}
 	
 	

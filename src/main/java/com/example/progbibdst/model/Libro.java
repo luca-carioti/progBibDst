@@ -13,11 +13,12 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.Data;
 
-@Data
 @Entity
 @Table (name = "libro")
 public class Libro {
@@ -38,7 +39,7 @@ public class Libro {
 	
 	@Column (nullable = false)
 	@Temporal(TemporalType.DATE)
-	@JsonFormat(pattern = "dd-MM-yyyy")
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Date annoPubb;
 	
 	@Column (nullable = false)
@@ -46,7 +47,68 @@ public class Libro {
 	
 	@Column (nullable = false)
 	private String genere;
+
 	
 	
+	
+	
+	public Libro() {}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getTitolo() {
+		return titolo;
+	}
+
+	public void setTitolo(String titolo) {
+		this.titolo = titolo;
+	}
+
+	public Autore getAutore() {
+		return autore;
+	}
+
+	public void setAutore(Autore autore) {
+		this.autore = autore;
+	}
+
+	public String getIsbn() {
+		return isbn;
+	}
+
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+
+	public Date getAnnoPubb() {
+		return annoPubb;
+	}
+
+	public void setAnnoPubb(Date annoPubb) {
+		this.annoPubb = annoPubb;
+	}
+
+	public String getEditore() {
+		return editore;
+	}
+
+	public void setEditore(String editore) {
+		this.editore = editore;
+	}
+
+	public String getGenere() {
+		return genere;
+	}
+
+	public void setGenere(String genere) {
+		this.genere = genere;
+	}
+		
 	
 }
